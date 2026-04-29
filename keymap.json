@@ -7,6 +7,14 @@
 // from the command palette.
 [
 	{
+		"context": "Workspace",
+		"bindings": {
+			"space e": "project_panel::Toggle",
+			"space m c": "workspace::CloseAllDocks",
+			"space :": "workspace::ToggleBottomDock",
+		},
+	},
+	{
 		"context": "Editor && (showing_code_actions || showing_completions)",
 		"bindings": {
 			"tab": "editor::ContextMenuNext",
@@ -71,9 +79,22 @@
 	{
 		"context": "ProjectPanel && !editing",
 		"bindings": {
-			"space e": "project_panel::Toggle",
 			"k": "menu::SelectNext",
 			"l": "menu::SelectPrevious",
+			"j": "project_panel::CollapseSelectedEntry",
+			"m": "project_panel::ExpandSelectedEntry",
+			"enter": "project_panel::Open",
+			"-": "project_panel::SelectParent",
+
+			"i": "project_panel::NewFile",
+			"o": "project_panel::NewDirectory",
+			"d": "project_panel::Delete",
+			"r": "project_panel::Rename",
+			"x": "project_panel::Cut",
+			"y y": "project_panel::Copy",
+			"p": "project_panel::Paste",
+
+			"space e": "project_panel::Toggle",
 		},
 	},
 	{
