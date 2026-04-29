@@ -1,0 +1,55 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+	"disable_ai": true,
+	"icon_theme": "Catppuccin Mocha",
+	"ui_font_family": "JetBrains Mono",
+	"ui_font_size": 10,
+	"buffer_font_family": "JetBrains Mono",
+	"buffer_font_size": 8,
+	"current_line_highlight": "line",
+	"theme": {
+		"mode": "light",
+		"light": "Sakura",
+		"dark": "Kokedera",
+	},
+	"vim_mode": true,
+	"relative_line_numbers": "enabled",
+	"hard_tabs": true,
+	"tab_size": 4,
+	"vertical_scroll_margin": 8,
+	"experimental.theme_overrides": {
+		"players": [
+			{
+				"cursor": "#FFFFFF",
+				"selection": "#332c3290",
+			},
+		],
+	},
+	"languages": {
+		"TSX": {
+			"show_edit_predictions": true,
+		},
+		"Python": {
+			"hard_tabs": false,
+		},
+	},
+	"project_panel": {
+		"dock": "right",
+	},
+	"outline_panel": {
+		"dock": "right",
+	},
+	"collaboration_panel": {
+		"dock": "right",
+	},
+	"git_panel": {
+		"dock": "right",
+	},
+}

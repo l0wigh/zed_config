@@ -1,0 +1,86 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+	{
+		"context": "Editor && (showing_code_actions || showing_completions)",
+		"bindings": {
+			"tab": "editor::ContextMenuNext",
+			"shift-tab": "editor::ContextMenuPrevious",
+		},
+	},
+	{
+		"context": "vim_mode == insert",
+		"bindings": {
+			"j k": ["workspace::SendKeystrokes", "escape"],
+		},
+	},
+	{
+		"context": "vim_mode == normal",
+		"bindings": {
+			"j": "vim::Left",
+			"k": "vim::Down",
+			"l": "vim::Up",
+			"m": "vim::Right",
+			"ù": "editor::MoveToBeginningOfLine",
+			"space m c": "workspace::CloseAllDocks",
+			"space l r": "editor::Rename",
+			"space l h": "editor::Hover",
+			"space l c": "editor::ToggleCodeActions",
+			"space l R": "editor::FindAllReferences",
+			"space l D": "editor::GoToDefinition",
+			"space l n": "editor::GoToDiagnostic",
+			"space l p": "editor::GoToPreviousDiagnostic",
+			"space l s": "outline::Toggle",
+			"space l f": "editor::Format",
+			"space l t": "task::Spawn",
+			"space l T": "task::Rerun",
+			"space b c": "pane::CloseActiveItem",
+			"alt-k": "pane::ActivatePreviousItem",
+			"alt-l": "pane::ActivateNextItem",
+			"space /": "editor::ToggleComments",
+			"space :": "workspace::ToggleBottomDock",
+			"space e": "project_panel::Toggle",
+			"space b b": "tab_switcher::ToggleAll",
+		},
+	},
+	{
+		"context": "vim_mode == visual",
+		"bindings": {
+			"j": "vim::Left",
+			"k": "vim::Down",
+			"l": "vim::Up",
+			"m": "vim::Right",
+			"ù": "editor::MoveToBeginningOfLine",
+			// Hacky way to exit visual mode after putting stuff in comment
+			"ctrl-/": "editor::ToggleComments",
+			"space /": ["workspace::SendKeystrokes", "ctrl-/ escape"],
+		},
+	},
+	{
+		"context": "Dock && !Terminal",
+		"bindings": {
+			"space e": "project_panel::Toggle",
+			"space m c": "workspace::CloseAllDocks",
+		},
+	},
+	{
+		"context": "ProjectPanel && !editing",
+		"bindings": {
+			"space e": "project_panel::Toggle",
+			"k": "menu::SelectNext",
+			"l": "menu::SelectPrevious",
+		},
+	},
+	{
+		"context": "Terminal",
+		"bindings": {
+			"space :": "workspace::ToggleBottomDock",
+			"space l T": "task::Rerun",
+		},
+	},
+]
