@@ -9,6 +9,12 @@
 	{
 		"context": "Workspace",
 		"bindings": {
+			"Z Z": "pane::CloseActiveItem",
+		},
+	},
+	{
+		"context": "Workspace && !Editor",
+		"bindings": {
 			"space e": "project_panel::Toggle",
 			"space m c": "workspace::CloseAllDocks",
 			"space :": "workspace::ToggleBottomDock",
@@ -35,7 +41,12 @@
 			"l": "vim::Up",
 			"m": "vim::Right",
 			"ù": "editor::MoveToBeginningOfLine",
-			"space m c": "workspace::CloseAllDocks",
+
+			"ctrl-w j": "workspace::ActivatePaneLeft",
+			"ctrl-w k": "workspace::ActivatePaneDown",
+			"ctrl-w l": "workspace::ActivatePaneUp",
+			"ctrl-w m": "workspace::ActivatePaneRight",
+
 			"space l r": "editor::Rename",
 			"space l h": "editor::Hover",
 			"space l c": "editor::ToggleCodeActions",
@@ -45,15 +56,17 @@
 			"space l p": "editor::GoToPreviousDiagnostic",
 			"space l s": "outline::Toggle",
 			"space l f": "editor::Format",
-			"space l t": "task::Spawn",
-			"space l T": "task::Rerun",
+
 			"space b c": "pane::CloseActiveItem",
-			"alt-k": "pane::ActivatePreviousItem",
-			"alt-l": "pane::ActivateNextItem",
-			"space /": "editor::ToggleComments",
-			"space :": "workspace::ToggleBottomDock",
-			"space e": "project_panel::Toggle",
 			"space b b": "tab_switcher::ToggleAll",
+
+			"space t s": "task::Spawn",
+			"space t t": "task::Rerun",
+
+			"space /": "editor::ToggleComments",
+			"space :": "workspace::NewTerminal",
+			"space e": "project_panel::Toggle",
+			"space m c": "workspace::CloseAllDocks",
 		},
 	},
 	{
@@ -70,7 +83,7 @@
 		},
 	},
 	{
-		"context": "Dock && !Terminal",
+		"context": "Dock && !Terminal && vim_mode == normal",
 		"bindings": {
 			"space e": "project_panel::Toggle",
 			"space m c": "workspace::CloseAllDocks",
@@ -83,7 +96,9 @@
 			"l": "menu::SelectPrevious",
 			"j": "project_panel::CollapseSelectedEntry",
 			"m": "project_panel::ExpandSelectedEntry",
-			"enter": "project_panel::Open",
+			"enter": "project_panel::OpenPermanent",
+			"ctrl-v": "project_panel::OpenSplitVertical",
+			"ctrl-h": "project_panel::OpenSplitHorizontal",
 			"-": "project_panel::SelectParent",
 
 			"i": "project_panel::NewFile",
@@ -95,13 +110,22 @@
 			"p": "project_panel::Paste",
 
 			"space e": "project_panel::Toggle",
+
+			"ctrl-w j": "workspace::ActivatePaneLeft",
+			"ctrl-w k": "workspace::ActivatePaneDown",
+			"ctrl-w l": "workspace::ActivatePaneUp",
+			"ctrl-w m": "workspace::ActivatePaneRight",
 		},
 	},
 	{
 		"context": "Terminal",
 		"bindings": {
-			"space :": "workspace::ToggleBottomDock",
+			"space :": "workspace::NewTerminal",
 			"space l T": "task::Rerun",
+			"ctrl-w j": "workspace::ActivatePaneLeft",
+			"ctrl-w k": "workspace::ActivatePaneDown",
+			"ctrl-w l": "workspace::ActivatePaneUp",
+			"ctrl-w m": "workspace::ActivatePaneRight",
 		},
 	},
 ]

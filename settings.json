@@ -1,37 +1,29 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
+	// Save the planet (just a bit)
 	"disable_ai": true,
-	"icon_theme": "Catppuccin Mocha",
-	"ui_font_family": "JetBrains Mono",
-	"ui_font_size": 10,
-	"buffer_font_family": "JetBrains Mono",
-	"buffer_font_size": 8,
-	"current_line_highlight": "line",
+
+	// What is a mouse anyway ?
+	"vim_mode": true,
+
+	// UI boring stuff
 	"theme": {
 		"mode": "light",
 		"light": "Sakura",
-		"dark": "Kokedera",
+		"dark": "Sakura",
 	},
-	"vim_mode": true,
+	"icon_theme": "Catppuccin Mocha",
+	"ui_font_family": "JetBrains Mono",
+	"buffer_font_family": "JetBrains Mono",
+	"ui_font_size": 10,
+	"buffer_font_size": 10,
+	"current_line_highlight": "line",
 	"relative_line_numbers": "enabled",
+	"vertical_scroll_margin": 8,
+	"horizontal_scroll_margin": 8,
+
+	// Some specific coding stuff
 	"hard_tabs": true,
 	"tab_size": 4,
-	"vertical_scroll_margin": 8,
-	"experimental.theme_overrides": {
-		"players": [
-			{
-				"cursor": "#FFFFFF",
-				"selection": "#332c3290",
-			},
-		],
-	},
 	"languages": {
 		"TSX": {
 			"show_edit_predictions": true,
@@ -40,16 +32,76 @@
 			"hard_tabs": false,
 		},
 	},
+
+	// -------------------------------
+	// Ultra specific UI configuration
+	// -------------------------------
+
+	// Project panel (aka Nerdtree)
 	"project_panel": {
 		"dock": "right",
+		"default_width": 300,
+		"hide_root": false,
+		"auto_fold_dirs": false,
+		"starts_open": true,
+		"scrollbar": {
+			"show": "never",
+		},
 	},
+
+	// Project Symbols
 	"outline_panel": {
 		"dock": "right",
+		"default_width": 300,
 	},
+
+	// No collab for now...
 	"collaboration_panel": {
 		"dock": "right",
+		"default_width": 300,
 	},
+
+	// No more lazygit !
 	"git_panel": {
 		"dock": "right",
+		"default_width": 300,
+	},
+
+	// Cleaner Titlebar
+	"title_bar": {
+		"show_onboarding_banner": false,
+		"show_project_items": true,
+		"show_branch_name": false,
+		"show_user_menu": true,
+	},
+
+	// Cleaner Tab bar
+	"tab_bar": {
+		"show_nav_history_buttons": false,
+		"show_tab_bar_buttons": false,
+		"show": true,
+	},
+
+	// Just so you know you can disable is
+	"status_bar": {
+		"experimental.show": true,
+	},
+
+	// Really need this ?
+	"toolbar": {
+		"quick_actions": false,
+		"breadcrumbs": false,
+	},
+
+	// No need to blame myself, I know it's me
+	"git": {
+		"inline_blame": {
+			"enabled": false,
+		},
+	},
+
+	// No need for this bs...
+	"scrollbar": {
+		"show": "never",
 	},
 }

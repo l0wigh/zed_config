@@ -23,8 +23,8 @@
         "element.disabled": "#161616",
         "drop_target.background": "#313131",
         "ghost_element.background": null,
-        "ghost_element.hover": "#313131",
-        "ghost_element.active": "#313131",
+        "ghost_element.hover": "#222222",
+        "ghost_element.active": "#423f46",
         "ghost_element.selected": "#313131",
         "ghost_element.disabled": null,
         "text": "#cfc3ca",
@@ -106,8 +106,13 @@
           }
         },
         "players": [
-		],
-		"hint": "#5f5567",
+          {
+            "cursor": "#ffffff",
+            "selection": "#362e35",
+            "background": "#ffffff"
+          }
+        ],
+        "hint": "#5f5567",
         "panel.overlay_background": "#222222",
         "panel.overlay_hover": "#161616",
         "pane.focused_border": "#e87a90",
@@ -125,4 +130,3 @@
   "isUserGenerated": true,
   "description": "Sakura theme"
 }
-
