@@ -63,6 +63,8 @@
 			"space t s": "task::Spawn",
 			"space t t": "task::Rerun",
 
+			"space g g": "git_panel::Toggle",
+
 			"space /": "editor::ToggleComments",
 			"space :": "workspace::NewTerminal",
 			"space e": "project_panel::Toggle",
@@ -115,6 +117,8 @@
 			"ctrl-w k": "workspace::ActivatePaneDown",
 			"ctrl-w l": "workspace::ActivatePaneUp",
 			"ctrl-w m": "workspace::ActivatePaneRight",
+
+			"space g g": "git_panel::Toggle",
 		},
 	},
 	{
@@ -126,6 +130,14 @@
 			"ctrl-w k": "workspace::ActivatePaneDown",
 			"ctrl-w l": "workspace::ActivatePaneUp",
 			"ctrl-w m": "workspace::ActivatePaneRight",
+		},
+	},
+	{
+		"context": "GitPanel && !editing",
+		"bindings": {
+			"space g g": "git_panel::Toggle",
+			"k": "menu::SelectNext",
+			"l": "menu::SelectPrevious",
 		},
 	},
 ]
